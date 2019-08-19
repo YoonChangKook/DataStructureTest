@@ -52,7 +52,7 @@ public final class Sort {
 		int left = start, right = middle + 1;
 
 		while (left <= middle && right <= end) {
-			if (arr[left].compareTo(arr[right]) > 0) result.add(arr[left++]);
+			if (arr[left].compareTo(arr[right]) < 0) result.add(arr[left++]);
 			else result.add(arr[right++]);
 		}
 
