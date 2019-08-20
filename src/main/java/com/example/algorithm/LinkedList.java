@@ -39,7 +39,7 @@ public class LinkedList<T> {
 		if (this.head == null) {
 			this.head = newNode;
 		} else {
-			Node temp = head;
+			Node<T> temp = head;
 
 			// 마지막 노드 찾기
 			while (temp.getLink() != null) {
@@ -58,8 +58,8 @@ public class LinkedList<T> {
 	 * @throws IllegalArgumentException 데이터와 일치하는 노드가 없을 때
 	 */
 	public void delete(T data) throws IllegalArgumentException {
-		Node preNode = this.head;
-		Node currentNode = this.head.getLink();
+		Node<T> preNode = this.head;
+		Node<T> currentNode = this.head.getLink();
 
 		if (data.equals(preNode.getData())) {
 			// 첫번째 노드가 일치할 때
@@ -96,8 +96,8 @@ public class LinkedList<T> {
 	 * @return 주어진 데이터와 일치하는 노드
 	 * @throws IllegalArgumentException 데이터와 일치하는 노드가 없을 때
 	 */
-	public Node search(T data) throws IllegalArgumentException {
-		Node currentNode = this.head;
+	public Node<T> search(T data) throws IllegalArgumentException {
+		Node<T> currentNode = this.head;
 
 		while (currentNode != null) {
 			if (data.equals(currentNode.getData())) {
@@ -123,7 +123,7 @@ public class LinkedList<T> {
 	 * 리스트에 존재하는 모든 노드를 출력한다.
 	 */
 	public void print() {
-		Node currentNode = this.head;
+		Node<T> currentNode = this.head;
 
 		System.out.print("Linked List: ");
 		while (currentNode != null) {
@@ -140,7 +140,7 @@ public class LinkedList<T> {
 	 */
 	public static class Node<T> {
 		private T data;
-		private Node link;
+		private Node<T> link;
 
 		public Node() {
 			this.data = null;
@@ -155,11 +155,11 @@ public class LinkedList<T> {
 			this.data = data;
 		}
 
-		public Node getLink() {
+		public Node<T> getLink() {
 			return link;
 		}
 
-		public void setLink(Node link) {
+		public void setLink(Node<T> link) {
 			this.link = link;
 		}
 	}
