@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class SynchronizedQueueTest {
 	private static final int TEST_SIZE = 50;
-	private static final int SYNCHRONIZED_TEST_SIZE = 10000;
+	private static final int SYNCHRONIZED_TEST_SIZE = 1000000;
 
 	@Test
 	public void enqueueAndDequeueTest() {
@@ -44,6 +44,13 @@ public class SynchronizedQueueTest {
 
 		producer.start();
 		consumer.start();
+
+		try {
+			producer.join();
+			consumer.join();
+		} catch (InterruptedException ex) {
+			ex.printStackTrace();
+		}
 
 		// check if the stack is empty
 		assertTrue(queue.isEmpty());
