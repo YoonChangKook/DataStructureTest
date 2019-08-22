@@ -1,8 +1,4 @@
-package com.example.algorithm;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+package com.example.datastructure;
 
 /**
  * 최대 힙

@@ -1,4 +1,4 @@
-package com.example.algorithm;
+package com.example.datastructure;
 
 /**
  * 이진 탐색을 도와주는 유틸 클래스

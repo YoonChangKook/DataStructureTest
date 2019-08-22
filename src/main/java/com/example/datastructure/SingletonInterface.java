@@ -1,4 +1,4 @@
-package com.example.algorithm;
+package com.example.datastructure;
 
 public interface SingletonInterface {
 	int getNum();

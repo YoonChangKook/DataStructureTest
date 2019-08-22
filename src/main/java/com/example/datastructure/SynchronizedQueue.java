@@ -1,4 +1,4 @@
-package com.example.algorithm;
+package com.example.datastructure;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

@@ -1,4 +1,4 @@
-package com.example.algorithm;
+package com.example.datastructure;
 
 import static org.junit.Assert.*;
 

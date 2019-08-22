@@ -1,4 +1,4 @@
-package com.example.algorithm;
+package com.example.datastructure;
 
 /**
  * lazy-loading 싱글톤 테스트 클래스
